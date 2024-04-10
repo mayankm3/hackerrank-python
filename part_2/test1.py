@@ -1,10 +1,11 @@
-# with open('test1.txt') as f:
-#     lines = f.readlines()
-#     for line in lines:
-#         print(lines)
-
-# Open the file in read mode
-with open('test1.txt', 'r') as file:
-    # Read line by line
-    for line in file:
-        print("||"+line.strip()+"^")  # Remove newline characters
+import sys
+# provides getsizeof function
+data = [ ]
+for k in range(27):
+# NOTE: must fix choice of n
+    a = len(data)
+    # number of elements
+    b = sys.getsizeof(data)
+    # actual size in bytes
+    print('Length: {0:3d}; Size in bytes: {1:4d} '.format(a, b))
+    data.append(None)
